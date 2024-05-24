@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import "./styles.css"
 
-class ChalkBoard extends Component {
+class Chalkboard extends Component {
     state = {
         chalk: "",
         notes: [],
@@ -24,14 +24,16 @@ class ChalkBoard extends Component {
         const notes = this.state.notes.map(note=> <li>{note}</li>)
         return (
             <div className="App">
-                <form
+                <form>
+                  <input
                     type="text"
                     placeholder="Type here"
                     value={this.state.chalk}
-                />
-                <form
+                  />
+                  <input 
                     type="submit"
-                />
+                  />
+                </form>
                 <div className="board">
                     <h1 className="chalk">{this.state.chalk}</h1>
                 </div>
@@ -40,3 +42,6 @@ class ChalkBoard extends Component {
         )
     }
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Chalkboard />, rootElement);
