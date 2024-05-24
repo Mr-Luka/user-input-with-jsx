@@ -12,7 +12,7 @@ class Chalkboard extends Component {
     };
     updateNotes = e => {
         e.preventDefault();
-        const newNotes = this.state.notes.splice()
+        const newNotes = this.state.notes.slice()
         newNotes.push(this.state.chalk);
         this.setState({
             chalk: "",
@@ -24,8 +24,9 @@ class Chalkboard extends Component {
         const notes = this.state.notes.map(note=> <li>{note}</li>)
         return (
             <div className="App">
-                <form>
+                <form onSubmit={this.updateNotes}>
                   <input
+                    onChange={this.updateChalk}
                     type="text"
                     placeholder="Type here"
                     value={this.state.chalk}
