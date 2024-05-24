@@ -9,6 +9,15 @@ class ChalkBoard extends Component {
     }
     updateChalk = e => {
         this.setState({chalk: e.target.value});
+    };
+    updateNotes = e => {
+        e.preventDefault();
+        const newNotes = this.state.notes.splice()
+        newNotes.push(this.state.chalk);
+        this.setState({
+            chalk: "",
+            notes: newNotes,
+        })
     }
 
     render (){
