@@ -9,9 +9,9 @@ input[type="text"] {
 }
 
 .board {
-  background-color: darkgreen;
+  background-color: rgba(75, 182, 75, 0.861);
   height: 150px;
-  border-bottom: 20px solid brown;
+  border-bottom: 20px solid rgba(165, 42, 42, 0.653);
   display: flex;
   align-items: center;
   justify-content: center;
