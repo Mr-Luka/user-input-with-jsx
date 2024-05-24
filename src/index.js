@@ -1,7 +1,11 @@
-import React from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import App from "./App.js";
-import "./styles.css";
+import "./styles.css"
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+class ChalkBoard extends Component {
+    state = {
+        chalk: "",
+        notes: [],
+    }
+    
+}
