@@ -7,6 +7,9 @@ class ChalkBoard extends Component {
         chalk: "",
         notes: [],
     }
+    updateChalk = e => {
+        this.setState({chalk: e.target.value});
+    }
 
     render (){
         const notes = this.state.notes.map(note=> <li>{note}</li>)
