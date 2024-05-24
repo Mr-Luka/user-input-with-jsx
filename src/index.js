@@ -7,5 +7,19 @@ class ChalkBoard extends Component {
         chalk: "",
         notes: [],
     }
-    
+
+    render (){
+        return (
+            <div className="App">
+                <form
+                    type="text"
+                    placeholder="Type here"
+                    value={this.state.chalk}
+                />
+                <form
+                    type="submit"
+                />
+            </div>
+        )
+    }
 }
