@@ -9,6 +9,7 @@ class ChalkBoard extends Component {
     }
 
     render (){
+        const notes = this.state.notes.map(note=> <li>{note}</li>)
         return (
             <div className="App">
                 <form
@@ -19,6 +20,10 @@ class ChalkBoard extends Component {
                 <form
                     type="submit"
                 />
+                <div className="board">
+                    <h1 className="chalk">{this.state.chalk}</h1>
+                </div>
+                <ul className="notes">{notes}</ul>
             </div>
         )
     }
