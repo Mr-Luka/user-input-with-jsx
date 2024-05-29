@@ -20,10 +20,11 @@ class Chalkboard extends Component {
         })
     }
     componentDidUpdate(){
-
+        const chalkBoard = JSON.stringify(this.state.notes);
+        localStorage.setItem("chalkBoard", chalkBoard);
     }
     componentDidMount(){
-        
+
     }
 
     render (){
