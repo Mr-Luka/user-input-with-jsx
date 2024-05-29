@@ -19,6 +19,12 @@ class Chalkboard extends Component {
             notes: newNotes,
         })
     }
+    componentDidUpdate(){
+
+    }
+    componentDidMount(){
+        
+    }
 
     render (){
         const notes = this.state.notes.map(note=> <li>{note}</li>)
