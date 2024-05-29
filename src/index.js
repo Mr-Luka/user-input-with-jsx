@@ -24,7 +24,11 @@ class Chalkboard extends Component {
         localStorage.setItem("chalkBoard", chalkBoard);
     }
     componentDidMount(){
-
+        const savedChalkString = localStorage.getItem("chalkBoard");
+        if (savedChalkString){
+            const savedNotes = JSON.parse(savedChalkString);
+            this.setState({notes: savedNotes});
+        }
     }
 
     render (){
